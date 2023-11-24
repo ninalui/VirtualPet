@@ -1,27 +1,31 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import org.junit.Test;
-import pet.GameTimerImpl;
-import pet.Health;
-import pet.Mood;
-import pet.Need;
-import pet.VirtualPet;
-import pet.VirtualPetImpl;
-import pet.GameTimer;
+import virtualpet.GameTimer;
+import virtualpet.GameTimerImpl;
+import virtualpet.Health;
+import virtualpet.Mood;
+import virtualpet.Need;
+import virtualpet.VirtualPet;
+import virtualpet.VirtualPetImpl;
 
 /**
- * JUnit test class for the virtual pet game.
+ * JUnit test class for VirtualPet.
  */
-public class testVirtualPet {
+public class VirtualPetTest {
 
   /**
-   * Helper method to stop execution for a given number of milliseconds to allow for scheduled
-   * needs decrease to run.
+   * Helper method to stop execution for a given number of milliseconds.
+   *
    * @param millis the number of milliseconds to sleep for.
    */
   private void sleep(long millis) {
@@ -36,7 +40,7 @@ public class testVirtualPet {
    * Tests the constructor of the virtual pet game and that all values are initialized correctly.
    */
   @Test
-public void testConstructor() {
+  public void testConstructor() {
     GameTimer timer = new GameTimerImpl();
     VirtualPet pet = new VirtualPetImpl("Test", timer);
     assertEquals("Test", pet.getName());
@@ -49,19 +53,124 @@ public void testConstructor() {
     assertEquals(100, pet.getNeedLevels().get(Need.ENERGY).intValue());
   }
 
+  /**
+   * Tests that the constructor throws an IllegalArgumentException when the name is null.
+   */
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorNullName() {
+      GameTimer timer = new GameTimerImpl();
+      VirtualPet pet = new VirtualPetImpl(null, timer);
+    }
+
+    /**
+     * Tests that the constructor throws an IllegalArgumentException when the timer is null.
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorNullTimer() {
+      VirtualPet pet = new VirtualPetImpl("Test", null);
+    }
+
+    /**
+     * Tests that the constructor throws an IllegalArgumentException when the name is null and
+     * the timer is null.
+     */
+    @Test(expected = IllegalArgumentException.class)
+    public void testConstructorNullNameAndTimer() {
+      VirtualPet pet = new VirtualPetImpl(null, null);
+    }
+
+    /**
+     * Tests toString method of the virtual pet game.
+     */
+    @Test
+    public void testToString() {
+      GameTimer timer = new GameTimerImpl();
+      VirtualPet pet = new VirtualPetImpl("Test", timer);
+      assertEquals("Name: Test\nAge: 0\nMood: Happy\nHealth: Healthy\nLife Stage: Puppy\n"
+          + "Need Levels:\n"
+            + "Hunger: 100\n"
+            + "Social: 100\n"
+            + "Hygiene: 100\n"
+            + "Energy: 100\n", pet.toString());
+    }
+
+  /**
+   * Tests getName method of the virtual pet game.
+   */
+  @Test
+    public void testGetName() {
+        GameTimer timer = new GameTimerImpl();
+        VirtualPet pet = new VirtualPetImpl("Test", timer);
+        assertEquals("Test", pet.getName());
+    }
+
+  /**
+   * Tests getMoodState method of the virtual pet game.
+   */
+  @Test
+    public void testGetMoodState() {
+        GameTimer timer = new GameTimerImpl();
+        VirtualPet pet = new VirtualPetImpl("Test", timer);
+        assertEquals(Mood.HAPPY, pet.getMoodState());
+    }
+
+  /**
+   * Tests getHealthState method of the virtual pet game.
+   */
+    @Test
+        public void testGetHealthState() {
+            GameTimer timer = new GameTimerImpl();
+            VirtualPet pet = new VirtualPetImpl("Test", timer);
+            assertEquals(Health.HEALTHY, pet.getHealthState());
+        }
+
+  /**
+   * Tests getLifeStage method of the virtual pet game.
+   */
+    @Test
+        public void testGetLifeStage() {
+            GameTimer timer = new GameTimerImpl();
+            VirtualPet pet = new VirtualPetImpl("Test", timer);
+            assertEquals("Puppy", pet.getLifeStage().toString());
+        }
+
+  /**
+   * Tests getNeedLevels method of the virtual pet game.
+   */
+    @Test
+    public void testGetNeedLevels() {
+        GameTimer timer = new GameTimerImpl();
+        VirtualPet pet = new VirtualPetImpl("Test", timer);
+        HashMap<Need, Integer> needMap = pet.getNeedLevels();
+        Set<Need> needs = needMap.keySet();
+        assertEquals(4, needs.size());
+        assertTrue(needs.contains(Need.HUNGER));
+        assertTrue(needs.contains(Need.SOCIAL));
+        assertTrue(needs.contains(Need.HYGIENE));
+        assertTrue(needs.contains(Need.ENERGY));
+
+        Collection<Integer> needLevels = needMap.values();
+        assertEquals(4, needLevels.size());
+        needLevels.forEach(needLevel -> assertEquals(100, needLevel.intValue()));
+
+        // checking needsMap cannot be mutated
+        assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue()); // original value
+        needMap.replace(Need.HUNGER, 50); // attempt to mutate
+        assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue()); // unchanged after mutating
+    }
 
   /**
    * Tests the interact method of the virtual pet game by feeding the pet.
    */
-    @Test
-    public void testInteractFeed() {
-      GameTimer timer = new GameTimerImpl();
-      VirtualPet pet = new VirtualPetImpl("Test", timer);
-      assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
-      sleep(3000);
-      pet.interact(Need.HUNGER);
-      assertEquals(95, pet.getNeedLevels().get(Need.HUNGER).intValue());
-    }
+  @Test
+  public void testInteractFeed() {
+    GameTimer timer = new GameTimerImpl();
+    VirtualPet pet = new VirtualPetImpl("Test", timer);
+    assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
+    sleep(3000);
+    pet.interact(Need.HUNGER);
+    assertEquals(95, pet.getNeedLevels().get(Need.HUNGER).intValue());
+  }
 
   /**
    * Tests the interact method of the virtual pet game by playing with the pet.
@@ -80,54 +189,67 @@ public void testConstructor() {
    * Tests the interact method of the virtual pet game by cleaning the pet.
    */
   @Test
-    public void testInteractClean() {
+  public void testInteractClean() {
     GameTimer timer = new GameTimerImpl();
-        VirtualPet pet = new VirtualPetImpl("Test", timer);
-        assertEquals(100, pet.getNeedLevels().get(Need.HYGIENE).intValue());
-        sleep(3000);
-        pet.interact(Need.HYGIENE);
-        assertEquals(100, pet.getNeedLevels().get(Need.HYGIENE).intValue());
-    }
+    VirtualPet pet = new VirtualPetImpl("Test", timer);
+    assertEquals(100, pet.getNeedLevels().get(Need.HYGIENE).intValue());
+    sleep(3000);
+    pet.interact(Need.HYGIENE);
+    assertEquals(100, pet.getNeedLevels().get(Need.HYGIENE).intValue());
+  }
 
   /**
    * Tests the interact method of the virtual pet game by putting the pet to sleep.
    */
   @Test
-    public void testInteractSleep() {
+  public void testInteractSleep() {
     GameTimer timer = new GameTimerImpl();
-        VirtualPet pet = new VirtualPetImpl("Test", timer);
-        assertEquals(100, pet.getNeedLevels().get(Need.ENERGY).intValue());
-        sleep(3000);
-        pet.interact(Need.ENERGY);
-        assertEquals(92, pet.getNeedLevels().get(Need.ENERGY).intValue());
-    }
+    VirtualPet pet = new VirtualPetImpl("Test", timer);
+    assertEquals(100, pet.getNeedLevels().get(Need.ENERGY).intValue());
+    sleep(3000);
+    pet.interact(Need.ENERGY);
+    assertEquals(95, pet.getNeedLevels().get(Need.ENERGY).intValue());
+  }
+
+  /**
+   * Tests the interact method throws an exception when attempting to interact with an invalid need.
+   */
+  @Test (expected = IllegalArgumentException.class)
+  public void testInteractInvalidNeed() {
+      GameTimer timer = new GameTimerImpl();
+      VirtualPet pet = new VirtualPetImpl("Test", timer);
+      assertEquals(100, pet.getNeedLevels().get(Need.ENERGY).intValue());
+      sleep(3000);
+      pet.interact(null);
+  }
 
   /**
    * Tests that the mood changes to a single low need correctly.
    */
   @Test
-    public void testUpdateMoodSingleLowNeed() {
+  public void testUpdateMoodSingleLowNeed() {
     GameTimer timer = new GameTimerImpl();
     VirtualPet pet = new VirtualPetImpl("Test", timer);
     assertEquals(Mood.HAPPY, pet.getMoodState());
     sleep(6000);
-    assertEquals(Mood.TIRED, pet.getMoodState());
-    pet.interact(Need.ENERGY);
     assertEquals(Mood.BORED, pet.getMoodState());
     pet.interact(Need.SOCIAL);
     pet.interact(Need.SOCIAL);
-    sleep(4000);
-    pet.interact(Need.ENERGY);
-    pet.interact(Need.ENERGY);
+    sleep(7000);
     pet.interact(Need.SOCIAL);
     pet.interact(Need.SOCIAL);
+    assertEquals(Mood.TIRED, pet.getMoodState());
+    pet.interact(Need.ENERGY);
+    pet.interact(Need.ENERGY);
     assertEquals(Mood.HUNGRY, pet.getMoodState());
     pet.interact(Need.HUNGER);
+    pet.interact(Need.SOCIAL);
+    pet.interact(Need.SOCIAL);
     assertEquals(Mood.DIRTY, pet.getMoodState());
-    }
+  }
 
   /**
-   * Test that the pet becomes happy after its need is met.
+   * Tests that the pet becomes unhappy then happy after its need is met.
    */
   @Test
   public void testMoodChangesBackToHappy() {
@@ -137,8 +259,8 @@ public void testConstructor() {
     sleep(6000);
     timer.stop();
     HashMap<Need, Integer> needs = pet.getNeedLevels();
-    assertEquals(64, needs.get(Need.ENERGY).intValue());
-    assertEquals(Mood.TIRED, pet.getMoodState());
+    assertEquals(70, needs.get(Need.SOCIAL).intValue());
+    assertEquals(Mood.BORED, pet.getMoodState());
     pet.interact(Need.ENERGY);
     assertEquals(Mood.BORED, pet.getMoodState());
     pet.interact(Need.SOCIAL);
@@ -147,77 +269,59 @@ public void testConstructor() {
   }
 
   /**
-   * Test that the pet becomes sad correctly.
+   * Tests that the pet becomes sad correctly.
    */
   @Test
-    public void testUpdateMoodSad() {
-    GameTimer timer = new GameTimerImpl();
-        VirtualPet pet = new VirtualPetImpl("Test", timer);
-        assertEquals(Mood.HAPPY, pet.getMoodState());
-        sleep(6000);
-        assertEquals(Mood.TIRED, pet.getMoodState());
-        sleep(10000);
-        assertEquals(Mood.SAD, pet.getMoodState());
-    }
-
-  /**
-   * Test that the pet becomes sick correctly.
-   */
-  @Test
-    public void testPetIllness() {
-    GameTimer timer = new GameTimerImpl();
-        VirtualPet pet = new VirtualPetImpl("Test", timer);
-        assertEquals(Health.HEALTHY, pet.getHealthState());
-        sleep(6000);
-        assertEquals(Health.HEALTHY, pet.getHealthState());
-        sleep(10000);
-        assertEquals(Health.SICK, pet.getHealthState());
-    }
-
-  /**
-   * Test that the pet becomes healthy after its needs are met.
-   */
-    @Test
-    public void testPetHealthChangesBackToHealthy() {
-      GameTimer timer = new GameTimerImpl();
-      VirtualPet pet = new VirtualPetImpl("Test", timer);
-      assertEquals(Health.HEALTHY, pet.getHealthState());
-      sleep(15000);
-      timer.stop();
-      assertEquals(Health.SICK, pet.getHealthState());
-      pet.interact(Need.ENERGY);
-      pet.interact(Need.ENERGY);
-      pet.interact(Need.ENERGY);
-      pet.interact(Need.ENERGY);
-      pet.interact(Need.SOCIAL);
-      pet.interact(Need.SOCIAL);
-      pet.interact(Need.SOCIAL);
-      pet.interact(Need.SOCIAL);
-      assertEquals(Health.HEALTHY, pet.getHealthState());
-    }
-
-  /**
-   * Test that the pet's need levels decrease as scheduled correctly.
-   */
-  @Test
-    public void testDecreaseNeedsOverTime() {
+  public void testUpdateMoodSad() {
     GameTimer timer = new GameTimerImpl();
     VirtualPet pet = new VirtualPetImpl("Test", timer);
-    assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
-    sleep(3000);
-    assertEquals(90, pet.getNeedLevels().get(Need.HUNGER).intValue());
-    assertEquals(85, pet.getNeedLevels().get(Need.SOCIAL).intValue());
-    assertEquals(91, pet.getNeedLevels().get(Need.HYGIENE).intValue());
-    assertEquals(82, pet.getNeedLevels().get(Need.ENERGY).intValue());
-    sleep(3000);
-    assertEquals(80, pet.getNeedLevels().get(Need.HUNGER).intValue());
-    assertEquals(70, pet.getNeedLevels().get(Need.SOCIAL).intValue());
-    assertEquals(82, pet.getNeedLevels().get(Need.HYGIENE).intValue());
-    assertEquals(64, pet.getNeedLevels().get(Need.ENERGY).intValue());
-}
+    assertEquals(Mood.HAPPY, pet.getMoodState());
+    sleep(6000);
+    assertEquals(Mood.BORED, pet.getMoodState());
+    pet.interact(Need.SOCIAL);
+    pet.interact(Need.SOCIAL);
+    sleep(23000);
+    assertEquals(Mood.SAD, pet.getMoodState());
+  }
 
   /**
-   * Test that life stage changes after the appropriate amount of time has passed.
+   * Tests that the pet becomes sick correctly.
+   */
+  @Test
+  public void testPetIllness() {
+    GameTimer timer = new GameTimerImpl();
+    VirtualPet pet = new VirtualPetImpl("Test", timer);
+    assertEquals(Health.HEALTHY, pet.getHealthState());
+    sleep(6000);
+    assertEquals(Health.HEALTHY, pet.getHealthState());
+    sleep(10000);
+    assertEquals(Health.SICK, pet.getHealthState());
+  }
+
+  /**
+   * Tests that the pet gets sick then becomes healthy after its needs are met.
+   */
+  @Test
+  public void testPetHealthChangesBackToHealthy() {
+    GameTimer timer = new GameTimerImpl();
+    VirtualPet pet = new VirtualPetImpl("Test", timer);
+    assertEquals(Health.HEALTHY, pet.getHealthState());
+    sleep(15000);
+    timer.stop();
+    assertEquals(Health.SICK, pet.getHealthState());
+    pet.interact(Need.ENERGY);
+    pet.interact(Need.ENERGY);
+    pet.interact(Need.ENERGY);
+    pet.interact(Need.ENERGY);
+    pet.interact(Need.SOCIAL);
+    pet.interact(Need.SOCIAL);
+    pet.interact(Need.SOCIAL);
+    pet.interact(Need.SOCIAL);
+    assertEquals(Health.HEALTHY, pet.getHealthState());
+  }
+
+  /**
+   * Tests that life stage changes after the appropriate amount of time has passed.
    */
   @Test
   public void testLifeStageChanges() {
@@ -228,53 +332,35 @@ public void testConstructor() {
     pet.update();
     pet.update();
     assertEquals("Adult", pet.getLifeStage().toString());
-  }
-
-
-  /**
-   * Test that the life stage does not change if the pet is not healthy and happy.
-   */
-  //TO DO
-    @Test
-    public void testLifeStageDoesNotChange() {
-      GameTimer testingTimer = new TestingTimer();
-        VirtualPet pet = new VirtualPetImpl("Test", testingTimer);
-        assertEquals("Puppy", pet.getLifeStage().toString());
-        assertEquals(Health.HEALTHY, pet.getHealthState());
-        assertEquals(Mood.HAPPY, pet.getMoodState());
-        sleep(6000);
-        pet.update();
-        pet.update();
-        pet.update();
-        assertEquals(Mood.TIRED, pet.getMoodState());
-        assertEquals("Puppy", pet.getLifeStage().toString());
-    }
-
-  /**
-   * Helper method to keep the pet alive during puppy stage.
-   */
-  private void keepPuppyAlive(VirtualPet pet) {
-    for (int i = 0; i < 6; i++) {
-      pet.interact(Need.HUNGER);
-    }
-
-    for (int i = 0; i < 11; i++) {
-      pet.interact(Need.SOCIAL);
-    }
-
-    for (int i = 0; i < 6; i++) {
-      pet.interact(Need.HYGIENE);
-    }
-
-    for (int i = 0; i < 10; i++) {
-      pet.interact(Need.ENERGY);
-    }
+    pet.update();
+    pet.update();
+    pet.update();
+    pet.update();
+    pet.update();
+    assertEquals("Senior", pet.getLifeStage().toString());
   }
 
   /**
-   * Test that the pet's need levels decrease corresponding to the life stage correctly.
+   * Tests that the life stage does not change if the pet is not healthy and happy.
    */
-  //TO DO
+  @Test
+  public void testLifeStageDoesNotChange() {
+    GameTimer testingTimer = new TestingTimer();
+    VirtualPet pet = new VirtualPetImpl("Test", testingTimer);
+    assertEquals("Puppy", pet.getLifeStage().toString());
+    assertEquals(Health.HEALTHY, pet.getHealthState());
+    assertEquals(Mood.HAPPY, pet.getMoodState());
+    sleep(6000);
+    pet.update();
+    pet.update();
+    pet.update();
+    assertEquals(Mood.BORED, pet.getMoodState());
+    assertEquals("Puppy", pet.getLifeStage().toString());
+  }
+
+  /**
+   * Tests that the pet's need levels decrease corresponding to the life stage correctly.
+   */
   @Test
   public void testDecreaseNeedsOverTimeLifeStage() {
     GameTimer timer = new GameTimerImpl();
@@ -283,96 +369,86 @@ public void testConstructor() {
     for (Need need : needLevels.keySet()) {
       assertEquals(100, needLevels.get(need).intValue());
     }
-    try {
-      Thread.sleep(4000);
-    } catch (InterruptedException e) {
-      throw new RuntimeException(e);
-    }
-    for (Need need : needLevels.keySet()) {
-      assertEquals(85, needLevels.get(need).intValue());
-    }
-    try {
-      Thread.sleep(3000); // wait 3 seconds for scheduled decrease to run
-    } catch (InterruptedException e) {
-      throw new RuntimeException(e);
-    }
-    for (Need need : needLevels.keySet()) {
-      assertEquals(70, needLevels.get(need).intValue());
-    }
+    sleep(4000);
+    assertEquals(90, pet.getNeedLevels().get(Need.HUNGER).intValue());
+    assertEquals(85, pet.getNeedLevels().get(Need.SOCIAL).intValue());
+    assertEquals(91, pet.getNeedLevels().get(Need.HYGIENE).intValue());
+    assertEquals(90, pet.getNeedLevels().get(Need.ENERGY).intValue());
 
+    sleep(3000);
+    assertEquals(80, pet.getNeedLevels().get(Need.HUNGER).intValue());
+    assertEquals(70, pet.getNeedLevels().get(Need.SOCIAL).intValue());
+    assertEquals(82, pet.getNeedLevels().get(Need.HYGIENE).intValue());
+    assertEquals(80, pet.getNeedLevels().get(Need.ENERGY).intValue());
+  }
+
+/**
+ * Tests isAlive method of the virtual pet game.
+ */
+  @Test
+  public void testIsAlive() {
+      GameTimer timer = new GameTimerImpl();
+      VirtualPet pet = new VirtualPetImpl("Test", timer);
+      assertTrue(pet.isAlive());
+      sleep(23000);
+      assertFalse(pet.isAlive());
   }
 
   /**
-   * Test that the pet dies when its health reaches 0.
+   * Tests that the player cannot interact with the pet after it dies.
    */
-  @Test
-    public void testPetDeath() {
-    GameTimer timer = new GameTimerImpl();
-        VirtualPet pet = new VirtualPetImpl("Test", timer);
-        assertEquals(Health.HEALTHY, pet.getHealthState());
-        sleep(18000);
-        assertEquals(Health.DEAD, pet.getHealthState());
-    }
-
-  /**
-   * Test that the player cannot interact with the pet after it dies.
-   */
-    @Test (expected = IllegalStateException.class)
-        public void testActionWhenDead() {
-        GameTimer timer = new GameTimerImpl();
-            VirtualPet pet = new VirtualPetImpl("Test", timer);
-            assertEquals(Health.HEALTHY, pet.getHealthState());
-            sleep(18000);
-            assertEquals(Health.DEAD, pet.getHealthState());
-            pet.interact(Need.HUNGER);
-        }
-
-  /**
-   * Test that petDeath method throws exception when pet is not dead.
-   */
-  @Test (expected = IllegalStateException.class)
-    public void testPetDeathWhenNotDead() {
+  @Test(expected = IllegalStateException.class)
+  public void testActionWhenDead() {
     GameTimer timer = new GameTimerImpl();
     VirtualPet pet = new VirtualPetImpl("Test", timer);
     assertEquals(Health.HEALTHY, pet.getHealthState());
-    pet.petDeath();
-    }
+    sleep(23000);
+    assertEquals(Health.DEAD, pet.getHealthState());
+    pet.interact(Need.HUNGER);
+  }
+
   /**
-   * Test that the player cannot perform an action when the pet's need is already full.
+   * Tests that the player cannot perform an action when the pet's need is already full.
    */
-  @Test (expected = IllegalArgumentException.class)
-    public void testActionWhenNeedFull() {
+  @Test(expected = IllegalArgumentException.class)
+  public void testActionWhenNeedFull() {
     GameTimer timer = new GameTimerImpl();
-        VirtualPet pet = new VirtualPetImpl("Test", timer);
-        assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
-        pet.interact(Need.HUNGER);
+    VirtualPet pet = new VirtualPetImpl("Test", timer);
+    assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
+    pet.interact(Need.HUNGER);
+  }
+
+  /**
+   * Different implementation of GameTimer for testing purposes. Increments the elapsed time by 60
+   * seconds every time getElapsedTime() is called (in update method of VirtualPet) to allow for
+   * control over age and life stage.
+   */
+  static class TestingTimer implements GameTimer {
+    private final Timer timer;
+    private final Instant startTime;
+    private long count = 0;
+
+    public TestingTimer() {
+      this.startTime = Instant.now();
+      this.timer = new Timer();
     }
 
-    class TestingTimer implements GameTimer {
-        private final Timer timer;
-        private final Instant startTime;
-        private long count = 0;
-
-        public TestingTimer() {
-          this.startTime = Instant.now();
-          this.timer = new Timer();
-        }
-      @Override
-        public void scheduleTask(TimerTask task, long interval) {
-          this.timer.schedule(task, 2000, interval);
-      }
-
-      @Override
-        public void stop() {
-          this.timer.cancel();
-      }
-
-      @Override
-        public long getElapsedTime() {
-          count += 60;
-          Instant next = this.startTime.plusSeconds(count);
-          Duration duration = Duration.between(this.startTime, next);
-          return duration.getSeconds();
-      }
+    @Override
+    public void scheduleTask(TimerTask task, long interval) {
+      this.timer.schedule(task, 2000, interval);
     }
+
+    @Override
+    public void stop() {
+      this.timer.cancel();
+    }
+
+    @Override
+    public long getElapsedTime() {
+      count += 60;
+      Instant next = this.startTime.plusSeconds(count);
+      Duration duration = Duration.between(this.startTime, next);
+      return duration.getSeconds();
+    }
+  }
 }
