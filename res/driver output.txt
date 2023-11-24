@@ -1,0 +1,1965 @@
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+After 2 seconds:
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 95
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Playing with pet
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 95
+Social: 90
+Hygiene: 91
+Energy: 90
+
+Cleaning pet
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 95
+Social: 90
+Hygiene: 100
+Energy: 90
+
+Putting pet to sleep
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 95
+Social: 90
+Hygiene: 100
+Energy: 95
+
+After 6 seconds
+Jack is bored!
+
+After 9 seconds
+Jack is sick!
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 0
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 1
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 2
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+
+After 3 seconds
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Puppy
+Need Levels:
+Hunger: 90
+Social: 85
+Hygiene: 91
+Energy: 90
+
+Feeding pet
+Feeding pet
+Playing with pet
+Playing with pet
+Playing with pet
+Cleaning pet
+Putting pet to sleep
+Putting pet to sleep
+
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Adult
+Need Levels:
+Hunger: 100
+Social: 100
+Hygiene: 100
+Energy: 100
+
+Jack is now an Adult
+
+After 5 seconds
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Adult
+Need Levels:
+Hunger: 80
+Social: 80
+Hygiene: 90
+Energy: 80
+
+Feeding pet
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Adult
+Need Levels:
+Hunger: 90
+Social: 80
+Hygiene: 90
+Energy: 80
+
+Playing with pet
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Adult
+Need Levels:
+Hunger: 90
+Social: 90
+Hygiene: 90
+Energy: 80
+
+Cleaning pet
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Adult
+Need Levels:
+Hunger: 90
+Social: 90
+Hygiene: 95
+Energy: 80
+
+Putting pet to sleep
+Name: Jack
+Age: 3
+Mood: Happy
+Health: Healthy
+Life Stage: Adult
+Need Levels:
+Hunger: 90
+Social: 90
+Hygiene: 95
+Energy: 90
+
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+
+3 seconds...
+Jack has died! Game over!
+Name: Jack
+Age: 3
+Mood: Sad
+Health: Dead
+Life Stage: Adult
+Need Levels:
+Hunger: 0
+Social: 0
+Hygiene: 50
+Energy: 0
+
+
+Process finished with exit code 0
