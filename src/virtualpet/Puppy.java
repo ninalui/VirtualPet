@@ -1,53 +1,23 @@
 package virtualpet;
 
-import com.sun.source.tree.Tree;
-import java.util.TreeMap;
+/**
+ * This class represents the puppy life stage of a pet. It extends the AbstractLifeStage class.
+ * It contains the rates at which the pet's needs increase and decrease and the interval at which
+ * the pet's needs decrease. As a puppy, the pet's needs decrease at a faster rate and at larger
+ * values, and increase at smaller values to represent the fact that puppies require more attention
+ * and care than older dogs.
+ */
+public class Puppy extends AbstractLifeStage {
+  private static final int INTERVAL = 3000; // 3 seconds
+  private static final int[] INCREASE_RATES = {5, 5, 9, 5};
+  private static final int[] DECREASE_RATES = {10, 15, 9, 10};
 
-public class Puppy implements PetLifeStage {
-  private TreeMap<Need, Integer> increaseNeedLevels;
-  private TreeMap<Need, Integer> decreaseNeedLevels;
-
-  final int upHunger = 10;
-  final int upSocial = 5;
-  final int upHygiene = 10;
-  final int upEnergy = 10;
-
-  final int downHunger = -10;
-  final int downSocial = -10;
-  final int downHygiene = -10;
-  final int downEnergy = -15;
-
-
-public Puppy() {
-    this.increaseNeedLevels = initializeIncreaseNeedLevels();
-    this.decreaseNeedLevels = initializeDecreaseNeedLevels();
-  }
-
-  private TreeMap<Need, Integer> initializeIncreaseNeedLevels() {
-    TreeMap<Need, Integer> increaseNeedLevels = new TreeMap<Need, Integer>();
-    increaseNeedLevels.put(Need.HUNGER, upHunger);
-    increaseNeedLevels.put(Need.SOCIAL, upSocial);
-    increaseNeedLevels.put(Need.HYGIENE, upHygiene);
-    increaseNeedLevels.put(Need.ENERGY, upEnergy);
-    return increaseNeedLevels;
-  }
-
-  private TreeMap<Need, Integer> initializeDecreaseNeedLevels() {
-    TreeMap<Need, Integer> decreaseNeedLevels = new TreeMap<Need, Integer>();
-    decreaseNeedLevels.put(Need.HUNGER, downHunger);
-    decreaseNeedLevels.put(Need.SOCIAL, downSocial);
-    decreaseNeedLevels.put(Need.HYGIENE, downHygiene);
-    decreaseNeedLevels.put(Need.ENERGY, downEnergy);
-    return decreaseNeedLevels;
+  public Puppy() {
+    super(INCREASE_RATES, DECREASE_RATES, INTERVAL);
   }
 
   @Override
-  public int increaseNeed(Need need, Integer currentLevel) {
-    return currentLevel + increaseNeedLevels.get(need);
-  }
-
-  @Override
-  public int decreaseNeed(Need need, Integer currentLevel) {
-    return currentLevel + decreaseNeedLevels.get(need);
+  public String toString() {
+    return "Puppy";
   }
 }

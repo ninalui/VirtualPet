@@ -1,51 +1,23 @@
 package virtualpet;
 
-import java.util.TreeMap;
-
-public class Adult implements PetLifeStage {
-
-  private TreeMap<Need, Integer> increaseNeedLevels;
-  private TreeMap<Need, Integer> decreaseNeedLevels;
-
-  final int upHunger = 10;
-  final int upSocial = 5;
-  final int upHygiene = 10;
-  final int upEnergy = 10;
-  final int downHunger = 10;
-  final int downSocial = 10;
-  final int downHygiene = 10;
-  final int downEnergy = 15;
+/**
+ * This class represents the adult life stage of a pet. It extends the AbstractLifeStage class.
+ * It contains the rates at which the pet's needs increase and decrease and the interval at which
+ * the pet's needs decrease. As an adult, the pet's needs decrease at a slower rate and at smaller
+ * values, and increase at higher values than the previous puppy life stage, similar to how an
+ * older dog requires less attention and care than a puppy.
+ */
+public class Adult extends AbstractLifeStage {
+  private static final int INTERVAL = 5000; // 5 seconds
+  private static final int[] INCREASE_RATES = {10, 10, 5, 10};
+  private static final int[] DECREASE_RATES = {10, 10, 5, 10};
 
   public Adult() {
-    this.increaseNeedLevels = initializeIncreaseNeedLevels();
-    this.decreaseNeedLevels = initializeDecreaseNeedLevels();
-  }
-
-  private TreeMap<Need, Integer> initializeIncreaseNeedLevels() {
-    TreeMap<Need, Integer> increaseNeedLevels = new TreeMap<Need, Integer>();
-    increaseNeedLevels.put(Need.HUNGER, upHunger);
-    increaseNeedLevels.put(Need.SOCIAL, upSocial);
-    increaseNeedLevels.put(Need.HYGIENE, upHygiene);
-    increaseNeedLevels.put(Need.ENERGY, upEnergy);
-    return increaseNeedLevels;
-  }
-
-  private TreeMap<Need, Integer> initializeDecreaseNeedLevels() {
-    TreeMap<Need, Integer> decreaseNeedLevels = new TreeMap<Need, Integer>();
-    decreaseNeedLevels.put(Need.HUNGER, downHunger);
-    decreaseNeedLevels.put(Need.SOCIAL, downSocial);
-    decreaseNeedLevels.put(Need.HYGIENE, downHygiene);
-    decreaseNeedLevels.put(Need.ENERGY, downEnergy);
-    return decreaseNeedLevels;
+    super(INCREASE_RATES, DECREASE_RATES, INTERVAL);
   }
 
   @Override
-  public int increaseNeed(Need need, Integer currentLevel) {
-    return currentLevel + increaseNeedLevels.get(need);
-  }
-
-  @Override
-  public int decreaseNeed(Need need, Integer currentLevel) {
-    return currentLevel - increaseNeedLevels.get(need);
+  public String toString() {
+    return "Adult";
   }
 }

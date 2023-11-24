@@ -1,32 +1,32 @@
 package virtualpet;
 
-import java.util.Timer;
 import java.util.TimerTask;
 
-public class GameTimer {
-  Timer timer;
-  int timeInterval;
-  long startTime;
-  VirtualPet pet;
+/**
+ * This interface represents a timer for a virtual pet game. The timer is used to keep track of the
+ * time passed in the game and to schedule a task to decrease the pet's need levels at a given
+ * interval.
+ */
+public interface GameTimer {
 
-  public GameTimer(int timeInterval, VirtualPet pet) {
-    this.startTime = System.currentTimeMillis();
-    this.pet = pet;
-    this.timer = new Timer();
-    this.timeInterval = timeInterval;
-    scheduleNeedsDecrease();
-  }
+  /**
+   * Schedule a task to perform at a given interval.
+   *
+   * @param task      the task to perform.
+   * @param interval  the interval at which to perform the task.
+   */
+  void scheduleTask(TimerTask task, long interval);
 
-  private void scheduleNeedsDecrease() {
-    this.timer.schedule(new TimerTask() {
-      @Override
-      public void run() {
-        System.out.println("Decreasing need levels");
-        pet.decreaseNeedLevels();
-      }
-    }, 5000, this.timeInterval);
-  }
-  public long getElapsedTime() {
-    return System.currentTimeMillis() - startTime;
-  }
+  /**
+   * Stops the timer.
+   */
+  void stop();
+
+  /**
+   * Gets the amount of time that has passed since the timer was started.
+   *
+   * @return the amount of seconds that have passed since the timer was started.
+   */
+  long getElapsedTime();
+
 }

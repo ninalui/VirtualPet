@@ -1,46 +1,81 @@
 package virtualpet;
 
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.HashMap;
 
 /**
- * Interface representing a virtual pet. The virtual pet can be fed, played with, cleaned, and put
- * to sleep. The virtual pet has a name, mood state, health state, life stage, and need levels.
+ * This interface represents a virtual pet game. A player can interact with the pet by feeding it,
+ * playing with it, cleaning it, and putting it to sleep. The pet has a name, mood state, health
+ * state, life stage, and need levels. The player must interact with the pet to maintain its needs
+ * and keep it happy and healthy. If a need drops below 75, its mood changes accordingly to display
+ * its desired interaction. If more than one need drops below 25, the pet becomes sad. The pet's
+ * health is calculated as the average between all its needs and if it drops below 50, the pet
+ * becomes ill. If a need hits 0, the pet dies and the game ends. If the pet is healthy and happy,
+ * then when the appropriate amount of time has passed, the pet grows and enters a new life stage.
+ * The pet's life stage determines how needs are increasing and decreasing, and needs decrease
+ * over time.
  */
 public interface VirtualPet {
 
   /**
-   * Perform an action with the virtual pet.
+   * Get the name of the pet.
+   *
+   * @return the name of the pet.
    */
-  public void action(Need need);
+  String getName();
 
   /**
-   * Get the virtual pet's name
+   * Get the pet's current mood.
+   *
+   * @return the mood of the pet.
    */
-  public String getName();
+  Mood getMoodState();
 
   /**
-   * Get the virtual pet's current mood state.
+   * Get the pet's current health state.
+   *
+   * @return the current health state of the pet.
    */
-  public Mood getMoodState();
+  Health getHealthState();
 
   /**
-   * Get the virtual pet's current health state.
+   * Get the pet's current life stage.
+   *
+   * @return the current life stage of the pet.
    */
-  public Health getHealthState();
+  PetLifeStage getLifeStage();
 
   /**
-   * Get the virtual pet's current life stage.
+   * Get the pet's current need levels.
+   *
+   * @return the current need levels of the pet.
    */
-  public PetLifeStage getLifeStage();
+  HashMap<Need, Integer> getNeedLevels();
 
   /**
-   * Get the virtual pet's current need levels.
+   * Interact with the pet (feed, play, clean, or put to sleep). Throws an IllegalStateException
+   * if the pet is dead and an IllegalArgumentException if the need is invalid or already full.
+   *
+   * @param need  the need corresponding with the desired interaction.
    */
-  public TreeMap getNeedLevels();
+  void interact(Need need) throws IllegalStateException, IllegalArgumentException;
 
-  public void decreaseNeedLevels();
+  /**
+   * Updates the mood, health, and life stage of the virtual pet.
+   */
+  void update();
 
-  public String needLevelsToString();
+  /**
+   * Checks if the pet is alive.
+   *
+   * @return true if the pet is alive, false otherwise.
+   */
+  boolean isAlive();
 
+  /**
+   * Returns a string representation of the pet. Provides the pet's name, its current mood and
+   * health states, and its need levels.
+   *
+   * @return a string representation of the pet.
+  */
+  String toString();
 }
