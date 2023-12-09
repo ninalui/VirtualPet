@@ -9,15 +9,15 @@ This program utilizes the Model-View-Controller design to run a Tamagotchi-style
 Pet Creation 
 - Customize the virtual pet by choosing its name.
 
-- Interaction
-Engage with the virtual pet through four programmed actions: feeding, playing, cleaning, and putting it to sleep.
+Interaction
+- Engage with the virtual pet through four programmed actions: feeding, playing, cleaning, and putting it to sleep.
 
-- Health and Mood Maintenance
-Maintain the virtual pet's health and happiness by fulfilling its needs through interacting with it.
+Health and Mood Maintenance
+- Maintain the virtual pet's health and happiness by fulfilling its needs through interacting with it.
 Failure to interact with the pet results in mood changes and deteriorating health, ultimately leading in death if neglected. 
 
-- Pet Growth
-Witness different life stages, from child, adult, to senior.
+Pet Growth
+- Witness different life stages, from child, adult, to senior.
 
 ## How to Run
 
