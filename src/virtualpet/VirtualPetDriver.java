@@ -1,7 +1,21 @@
 package virtualpet;
 
+/**
+ * Driver class for Virtual Pet. Demonstrates game play of virtual pet including
+ * creation of new game, displaying stats, how needs decrease over time and increase upon
+ * interaction, how the virtual pet grows into a new life stage after a certain amount of time
+ * has passed, how needs decrease and increase differently upon entering a new life stage,
+ * and dies when neglected and needs hit 0.
+ */
 public class VirtualPetDriver {
 
+  /**
+   * Driver for virtual pet game.
+   *
+   * @param args  command-line arguments
+   * @throws InterruptedException from running Thread.sleep, if any threads interrupt the currently
+   *                              running thread
+   */
   public static void main(String[] args) throws InterruptedException {
     // Create game timer and new pet
     GameTimer timer = new GameTimerImpl();
@@ -10,11 +24,11 @@ public class VirtualPetDriver {
     // Display initial pet stats
     System.out.println(pet);
 
-    // Wait for 2 seconds for first need decrease
-    Thread.sleep(2000);
+    // Wait for 5 seconds for first need decrease
+    Thread.sleep(5000);
 
     // Display updated pet stats
-    System.out.println("After 2 seconds:");
+    System.out.println("After 5 seconds:");
     System.out.println(pet);
 
     // Interact with the pet and display updated stats
@@ -38,57 +52,46 @@ public class VirtualPetDriver {
     System.out.println("Putting pet to sleep");
     System.out.println(pet);
 
-    // Wait for 6 seconds for needs to decrease
-    Thread.sleep(6000);
+    // Wait for 20 seconds for needs to decrease
+    Thread.sleep(20000);
     // Neglecting the pet's needs leads to mood changes and health deterioration
-    System.out.println("After 6 seconds");
-    System.out.println(pet.getName() + " is " + pet.getMoodState().toString().toLowerCase() + "!\n");
-    Thread.sleep(9000);
-    System.out.println("After 9 seconds");
-    System.out.println(pet.getName() + " is " + pet.getHealthState().toString().toLowerCase() + "!\n");
+    System.out.println("After 20 seconds");
+    System.out.println(
+        pet.getName() + " is " + pet.getMoodState().toString().toLowerCase() + "!\n");
+    Thread.sleep(10000);
+    System.out.println("After 10 seconds");
+    System.out.println(
+        pet.getName() + " is " + pet.getHealthState().toString().toLowerCase() + "!\n");
 
     // Interact with pet to fulfill needs to 100
-    for (int i = 0; i < 11; i++) {
+    for (int i = 0; i < 4; i++) {
       pet.interact(Need.HUNGER);
-    }
-    for (int i = 0; i < 17; i++) {
       pet.interact(Need.SOCIAL);
-    }
-    for (int i = 0; i < 5; i++) {
       pet.interact(Need.HYGIENE);
-    }
-    for (int i = 0; i < 11; i++) {
       pet.interact(Need.ENERGY);
     }
 
     // Display updated stats
     System.out.println(pet);
 
-    // Simulate game play for 3 minutes so the pet can grow up to an adult
+    // Simulate game play up to 2 minutes so the pet can grow up to an adult
     Thread.sleep(1000);
-    for (int i = 0; i < 54; i++) {
+    for (int i = 0; i < 17; i++) {
       // Let time pass and needs decrease
-      Thread.sleep(3000);
-      System.out.println("\nAfter 3 seconds");
+      Thread.sleep(5000);
+      System.out.println("\nAfter 5 seconds");
       System.out.println(pet);
 
       // Interact with pet to maintain health and happiness
-      for (int j = 0; j < 2; j++) {
-        pet.interact(Need.HUNGER);
-        System.out.println("Feeding pet");
-      }
-      for (int j = 0; j < 3; j++) {
-        pet.interact(Need.SOCIAL);
-        System.out.println("Playing with pet");
-      }
-      for (int j = 0; j < 1; j++) {
-        pet.interact(Need.HYGIENE);
-        System.out.println("Cleaning pet");
-      }
-      for (int j = 0; j < 2; j++) {
-        pet.interact(Need.ENERGY);
-        System.out.println("Putting pet to sleep");
-      }
+      pet.interact(Need.HUNGER);
+      System.out.println("Feeding pet");
+      pet.interact(Need.SOCIAL);
+      System.out.println("Playing with pet");
+      pet.interact(Need.HYGIENE);
+      System.out.println("Cleaning pet");
+      pet.interact(Need.ENERGY);
+      System.out.println("Putting pet to sleep");
+
       System.out.println("\n" + pet);
     }
     System.out.println(pet.getName() + " is now an " + pet.getLifeStage().toString());
@@ -118,8 +121,8 @@ public class VirtualPetDriver {
 
     // Neglecting pet leads to death and game over
     while (pet.isAlive()) {
-      Thread.sleep(3000);
-      System.out.println("\n3 seconds...");
+      Thread.sleep(5000);
+      System.out.println("\n5 seconds...");
     }
     if (!pet.isAlive()) {
       System.out.println(pet.getName() + " has died! Game over!");

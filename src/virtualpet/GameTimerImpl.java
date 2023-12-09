@@ -10,7 +10,7 @@ import java.util.TimerTask;
  * It uses the java Timer class to schedule tasks and keep track of the elapsed time in seconds.
  */
 public class GameTimerImpl implements GameTimer {
-  private final Timer timer;
+  private Timer timer;
   private final Instant startTime;
 
   public GameTimerImpl() {
@@ -20,12 +20,13 @@ public class GameTimerImpl implements GameTimer {
 
   @Override
   public void scheduleTask(TimerTask task, long interval) {
-    this.timer.schedule(task, 2000, interval);
+    this.timer.schedule(task, 5000, interval);
   }
 
   @Override
   public void stop() {
     this.timer.cancel();
+    this.timer.purge();
   }
 
   @Override

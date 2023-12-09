@@ -8,6 +8,11 @@ package virtualpet;
 public interface PetLifeStage {
 
   /**
+   * The interval at which the pet's needs are decreasing, in milliseconds.
+   */
+  static long INTERVAL = 5000; // 5 seconds
+
+  /**
    * Increases the pet's need level of the given need. Throws an exception if the current level
    * is greater than 100. Returns the new need level, or 100, whichever is less.
    *

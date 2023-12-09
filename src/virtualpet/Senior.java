@@ -2,19 +2,17 @@ package virtualpet;
 
 /**
  * This class represents the senior life stage of a pet. It extends the AbstractLifeStage class.
- * It contains the rates at which the pet's needs increase and decrease and the interval at which
- * the pet's needs decrease. As a senior, the pet's needs decrease at a slower rate and at smaller
- * values, similar to how life slows down for a senior dog. The pet's needs increase at smaller
- * values as well to correspond with the smaller decrease rates.
+ * It contains the rates at which the pet's needs increase and decrease. As a senior, the pet's
+ * needs decrease at an even smaller value than the adult life stage, similar to how life slows
+ * down for a senior pet.
  */
 public class Senior extends AbstractLifeStage {
-  private static final int INTERVAL = 8000; // 8 seconds
-  private static final int[] INCREASE_RATES = {5, 5, 5, 10};
-  private static final int[] DECREASE_RATES = {8, 5, 5, 15};
+  private static final int[] INCREASE_RATES = {6, 10, 8, 10};
+  private static final int[] DECREASE_RATES = {1, 2, 5, 8};
 
 
   public Senior() {
-    super(INCREASE_RATES, DECREASE_RATES, INTERVAL);
+    super(INCREASE_RATES, DECREASE_RATES);
   }
 
   @Override

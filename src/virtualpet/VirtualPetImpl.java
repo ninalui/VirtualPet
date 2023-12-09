@@ -14,20 +14,22 @@ import java.util.TimerTask;
  * GameTimer to keep track of time and schedule the pet's needs to decrease over time.
  */
 public class VirtualPetImpl implements VirtualPet {
-  private final String name;
+  private String name;
   private Mood moodState;
   private Health healthState;
   private int health;
   private PetLifeStage lifeStage;
   private final HashMap<Need, Integer> needLevels;
   private final GameTimer timer;
+  private TimerTask timedDecrease;
+  private boolean running;
 
   /**
    * Creates a new virtual pet. It initializes the pet's name, mood state, health state, life stage,
    * and need levels, and schedules the pet's needs to decrease over time.
    *
-   * @param name    the name of the pet.
-   * @param timer   the timer used to keep track of time.
+   * @param name   the name of the pet.
+   * @param timer  the timer used to keep track of time.
    * @throws IllegalArgumentException if either the name or the timer is null.
    */
   public VirtualPetImpl(String name, GameTimer timer) throws IllegalArgumentException {
@@ -41,15 +43,26 @@ public class VirtualPetImpl implements VirtualPet {
     this.moodState = Mood.HAPPY;
     this.healthState = Health.HEALTHY;
     this.health = 100;
-    this.lifeStage = new Puppy();
+    this.lifeStage = new Child();
     this.needLevels = initializeNeedLevels();
     this.timer = timer;
+    this.running = true;
     decreaseNeedsOverTime();
+  }
+
+  @Override
+  public void setName(String name) {
+    this.name = name;
   }
 
   @Override
   public String getName() {
     return this.name;
+  }
+
+  @Override
+  public long getAge() {
+    return this.timer.getElapsedTime() / 60;
   }
 
   @Override
@@ -60,6 +73,11 @@ public class VirtualPetImpl implements VirtualPet {
   @Override
   public Health getHealthState() {
     return this.healthState;
+  }
+
+  @Override
+  public int getHealth() {
+    return this.health;
   }
 
   @Override
@@ -96,6 +114,15 @@ public class VirtualPetImpl implements VirtualPet {
   @Override
   public boolean isAlive() {
     return this.healthState != Health.DEAD;
+  }
+
+  @Override
+  public void pauseTimer() {
+    if (running) {
+      this.running = false;
+    } else {
+      this.running = true;
+    }
   }
 
   @Override
@@ -138,11 +165,13 @@ public class VirtualPetImpl implements VirtualPet {
     TimerTask task = new TimerTask() {
       @Override
       public void run() {
-        for (Need need : needLevels.keySet()) {
-          int decreasedLevel = lifeStage.decreaseNeed(need, needLevels.get(need));
-          needLevels.replace(need, decreasedLevel);
+        if (running) {
+          for (Need need : needLevels.keySet()) {
+            int decreasedLevel = lifeStage.decreaseNeed(need, needLevels.get(need));
+            needLevels.replace(need, decreasedLevel);
+          }
+          update();
         }
-        update();
       }
     };
     this.timer.scheduleTask(task, lifeStage.getInterval());
@@ -202,6 +231,7 @@ public class VirtualPetImpl implements VirtualPet {
     for (Need need : this.needLevels.keySet()) {
       if (this.needLevels.get(need) == 0) {
         this.healthState = Health.DEAD;
+        this.health = 0;
         this.petDeath();
         return;
       }
@@ -228,30 +258,20 @@ public class VirtualPetImpl implements VirtualPet {
 
   /**
    * Updates the life stage of the virtual pet. If the pet is healthy and happy, then when the
-   * appropriate amount of time has passed, the pet grows and enters a new life stage. At 3 minutes,
-   * the pet can become an adult, and at 8 minutes, the pet can become a senior.
+   * appropriate amount of time has passed, the pet grows and enters a new life stage. At 2 minutes,
+   * the pet can become an adult, and at 5 minutes, the pet can become a senior.
    */
   private void updateLifeStage() {
-    if (this.health != 100 || this.moodState != Mood.HAPPY) {
+    if (this.healthState != Health.HEALTHY || this.moodState != Mood.HAPPY) {
       return;
     }
 
     long age = this.getAge();
-    if (this.lifeStage instanceof Puppy && age >= 3) {
+    if (this.lifeStage instanceof Child && age >= 2) {
       this.lifeStage = new Adult();
-    } else if (this.lifeStage instanceof Adult && age >= 8) {
+    } else if (this.lifeStage instanceof Adult && age >= 5) {
       this.lifeStage = new Senior();
     }
-  }
-
-  /**
-   * Gets the age of the pet, calculated by the time elapsed since the pet was created. A minute
-   * correlates to a "year" in the pet's life.
-   *
-   * @return the age of the pet in minutes.
-   */
-  private long getAge() {
-    return this.timer.getElapsedTime() / 60;
   }
 
   /**

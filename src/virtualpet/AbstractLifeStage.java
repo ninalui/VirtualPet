@@ -17,17 +17,16 @@ public class AbstractLifeStage implements PetLifeStage {
   protected long interval;
 
   /**
-   * Constructs an AbstractLifeStage object with the given increase and decrease rates and interval.
+   * Constructs an AbstractLifeStage object with the given increase and decrease rates.
    *
    * @param increaseRates   list of increase rates.
    * @param decreaseRates   list of decrease rates.
-   * @param interval        the interval at which the pet's needs decrease.
    */
-  public AbstractLifeStage(int[] increaseRates, int[]  decreaseRates, long interval) {
+  public AbstractLifeStage(int[] increaseRates, int[]  decreaseRates) {
     ArrayList<Need> needs = initializeNeedsArray();
     this.needIncreases = initializeNeedsMap(needs, increaseRates);
     this.needDecreases = initializeNeedsMap(needs, decreaseRates);
-    this.interval = interval;
+    this.interval = INTERVAL;
   }
 
   @Override
@@ -37,7 +36,7 @@ public class AbstractLifeStage implements PetLifeStage {
 
   @Override
   public int increaseNeed(Need need, Integer currentLevel) throws IllegalArgumentException {
-    if (currentLevel > 100) {
+    if (currentLevel >= 100) {
       throw new IllegalArgumentException("Need level cannot be greater than 100.");
     }
     int newLevel = currentLevel + this.needIncreases.get(need);
@@ -46,7 +45,7 @@ public class AbstractLifeStage implements PetLifeStage {
 
   @Override
   public int decreaseNeed(Need need, Integer currentLevel) throws IllegalArgumentException {
-    if (currentLevel < 0) {
+    if (currentLevel <= 0) {
       throw new IllegalArgumentException("Need level cannot be less than 0.");
     }
     int newLevel = currentLevel - this.needDecreases.get(need);

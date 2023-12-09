@@ -12,6 +12,7 @@ import java.util.TimerTask;
 import org.junit.Test;
 import org.junit.experimental.ParallelComputer;
 import org.junit.runner.JUnitCore;
+import org.junit.runner.RunWith;
 import virtualpet.GameTimer;
 import virtualpet.GameTimerImpl;
 import virtualpet.Health;
@@ -185,7 +186,7 @@ import virtualpet.VirtualPetImpl;
       VirtualPet pet = new VirtualPetImpl("Test", timer);
       assertEquals(100, pet.getNeedLevels().get(Need.SOCIAL).intValue());
       sleep(6000);
-      assertEquals(90, pet.getNeedLevels().get(Need.SOCIAL).intValue());
+      assertEquals(88, pet.getNeedLevels().get(Need.SOCIAL).intValue());
       pet.interact(Need.SOCIAL);
       assertEquals(100, pet.getNeedLevels().get(Need.SOCIAL).intValue());
     }
@@ -258,7 +259,7 @@ import virtualpet.VirtualPetImpl;
     }
 
     /**
-     * Test that the mood changes back to happy after the pet's needs are met.
+     * Tests that the mood changes back to happy after the pet's needs are met.
      */
     @Test
     public void testUpdateMoodToHappy() {
@@ -275,7 +276,7 @@ import virtualpet.VirtualPetImpl;
     }
 
     /**
-     * Test that the pet gets sad correctly.
+     * Tests that the pet gets sad correctly.
      */
     @Test
     public void testUpdateMoodToSad() {
@@ -349,12 +350,12 @@ import virtualpet.VirtualPetImpl;
       assertEquals("Child", pet.getLifeStage().toString());
       assertEquals(Health.HEALTHY, pet.getHealthState());
       assertEquals(Mood.HAPPY, pet.getMoodState());
-      sleep(55000);
+      sleep(20000);
       pet.update();
       pet.update();
       pet.update();
-      assertEquals(Mood.HUNGRY, pet.getMoodState());
-      assertEquals("Puppy", pet.getLifeStage().toString());
+      assertEquals(Mood.BORED, pet.getMoodState());
+      assertEquals("Child", pet.getLifeStage().toString());
     }
 
     /**
@@ -370,13 +371,13 @@ import virtualpet.VirtualPetImpl;
       }
       sleep(6000);
       assertEquals(92, pet.getNeedLevels().get(Need.HUNGER).intValue());
-      assertEquals(90, pet.getNeedLevels().get(Need.SOCIAL).intValue());
+      assertEquals(88, pet.getNeedLevels().get(Need.SOCIAL).intValue());
       assertEquals(95, pet.getNeedLevels().get(Need.HYGIENE).intValue());
       assertEquals(90, pet.getNeedLevels().get(Need.ENERGY).intValue());
 
       sleep(5000);
       assertEquals(84, pet.getNeedLevels().get(Need.HUNGER).intValue());
-      assertEquals(80, pet.getNeedLevels().get(Need.SOCIAL).intValue());
+      assertEquals(76, pet.getNeedLevels().get(Need.SOCIAL).intValue());
       assertEquals(90, pet.getNeedLevels().get(Need.HYGIENE).intValue());
       assertEquals(80, pet.getNeedLevels().get(Need.ENERGY).intValue());
     }
@@ -415,6 +416,19 @@ import virtualpet.VirtualPetImpl;
       pet.interact(Need.HUNGER);
     }
 
+    @Test
+    public void testPauseTimer() {
+        GameTimer timer = new GameTimerImpl();
+        VirtualPet pet = new VirtualPetImpl("Test", timer);
+        assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
+        pet.pauseTimer();
+        sleep(5000);
+        assertEquals(100, pet.getNeedLevels().get(Need.HUNGER).intValue());
+        pet.pauseTimer();
+        sleep(5000);
+        assertEquals(92, pet.getNeedLevels().get(Need.HUNGER).intValue());
+    }
+
     /**
      * Different implementation of GameTimer for testing purposes. Increments the elapsed time by 60
      * seconds every time getElapsedTime() is called (in update method of VirtualPet) to allow for
@@ -449,4 +463,4 @@ import virtualpet.VirtualPetImpl;
       }
     }
   }
-}
+
