@@ -1,5 +1,9 @@
 # VirtualPet
 
+<div align="center">
+    <img src="https://github.com/user-attachments/assets/eac4bd0c-960e-410b-b3d3-f4c534df3a6e" /> 
+</div>
+
 ## Overview
 
 This program utilizes the Model-View-Controller design to run a Tamagotchi-style virtual pet game that a user can interact with. The program also implements the Strategy pattern to dynamically change the virtual pet's behaviour over time by changing the virtual pet's life stage, which changes how the levels of its needs increase upon user interaction and decrease over time. The user must interact with the virtual pet to maintain its health and happiness, leading to its growth. 
@@ -22,8 +26,8 @@ Pet Growth
 ## How to Run
 
 From a JAR file: 
-- Download VirtualPet.jar 
-- Ensure you are in the correct directory and run in terminal:
+1. Download VirtualPet.jar
+2. Ensure you are in the correct directory and run in terminal:
 ```bash
 java -jar VirtualPet.jar
 ```
